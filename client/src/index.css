@@ -3,6 +3,7 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #9a6eb973;
 }
 
 h1{
@@ -11,4 +12,9 @@ h1{
 
 .review-div{
   width: 450px;
+}
+
+.song-div{
+  width: 450px;
+  margin-bottom: 15px;
 }
