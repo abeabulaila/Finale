@@ -6,7 +6,10 @@ function Welcome() {
 
     return (
         <div>
-            <h1>Infinite Spirit Records</h1>
+            <div className="intro">
+                <h1>Infinite Spirit Records</h1>
+                <h4> <em> Home of that good stuff. </em></h4>
+            </div>
             <Container>
                 <Row>
                     <Col>
@@ -26,9 +29,9 @@ function Welcome() {
                         </div>
                     </Col>
                     <Col>
-                    <div>
-                        <SongHolder />
-                    </div>
+                        <div>
+                            <SongHolder />
+                        </div>
                     </Col>
                 </Row>
             </Container>
