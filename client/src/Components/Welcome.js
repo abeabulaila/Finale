@@ -14,7 +14,7 @@ function Welcome() {
             </div>
             <Container>
                 <Row>
-                    <Col>
+                    <Col >
                         <h1>// News</h1>
 
                     </Col>

@@ -23,6 +23,13 @@ function Artists({bandList}) {
                     )
                 })}
             </div>
+
+            <div className="capture-bottom">
+            <h1 className="capture-title-bottom"> More Coming...</h1>
+            </div>
+            <div>
+               {/* render footer page here.... maybe make a seperate component and then just import it here.. or everywhere under app.js like how i did the navbar..... */}
+            </div>
         </div>
     )
 }
