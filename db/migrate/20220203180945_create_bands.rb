@@ -4,6 +4,7 @@ class CreateBands < ActiveRecord::Migration[7.0]
       t.string :band_name
       t.string :album
       t.string :genre
+      t.string :img
 
       t.timestamps
     end
