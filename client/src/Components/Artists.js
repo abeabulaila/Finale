@@ -1,17 +1,7 @@
 import React from "react";
 import BandCard from "./BandCard";
-import { useState, useEffect } from "react";
 
-function Artists() {
-    const [bandList, setBandList] = useState([{}])
-
-    useEffect(() => {
-        fetch('/bands')
-            .then(r => r.json())
-            .then(data => setBandList(data))
-
-    }, [])
-    console.log(bandList)
+function Artists({bandList}) {
 
 
     return (
