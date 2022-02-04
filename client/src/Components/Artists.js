@@ -16,7 +16,9 @@ function Artists() {
 
     return (
         <div>
-            <h1> All Artists</h1>
+            <div className="capture">
+            <h1 className="capture-title"> All Artists</h1>
+            </div>
             <div className="band-holder">
                 {bandList.map(band => {
                     return (
