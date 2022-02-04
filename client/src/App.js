@@ -6,7 +6,6 @@ import Merch from './Components/Merch';
 import MyAccount from './Components/MyAccount';
 import NavBar from './Components/NavBar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-// import { useState, useEffect } from 'react';
 
 function App() {
 

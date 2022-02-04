@@ -6,6 +6,7 @@ body {
   background-image: url(/home/abeab/Development/code/P5/finale/client/src/Components/Images/texture.jpg);
   /* background-repeat: no-repeat; */
   background-size: 500px 500px;
+  cursor:crosshair
 }
 
 h1{
@@ -26,7 +27,7 @@ margin-top: 20px;
   margin-bottom: 15px;
   background-color: antiquewhite;
   border-radius: 15px 100px 10px 40px;
-  box-shadow: 3px 3px rgb(119, 72, 72), -1em 0 .4em rgb(59, 12, 68);
+  box-shadow: 3px 3px rgb(119, 72, 72), 1em 0 .4em rgb(59, 12, 68);
   margin-top: 20px;
 
 }
@@ -61,6 +62,13 @@ margin-left: 10px;
 .band-img{
   width: 200px;
   height: 200px;
+  box-shadow: 11px 4px 13px black;
+  margin-bottom: 15px;
+
+}
+.band-img:hover{
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .band-div{
