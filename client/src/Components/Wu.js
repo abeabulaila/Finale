@@ -1,17 +1,14 @@
 import React from "react";
 import { Container, Row, Col } from 'react-bootstrap'
-import Review from "./Review";
-function Gas() {
 
-
-
+function Wu() {
 
     return (
         <div>
             <Container>
                 <Row style={{ marginTop: '50px' }}>
                     <Col>
-                        <h1 id="slide">// Gas</h1>
+                        <h1 id="slide">// Wu-Tang Clan</h1>
 
                     </Col>
                     <Col>
@@ -37,7 +34,7 @@ function Gas() {
                     <Col>
                         <div>
                             <div className="song-div">
-                                <h2 className="song-title"> GAS - "Pop"</h2>
+                                <h2 className="song-title"> GAS - Pop</h2>
                                 <div style={{ borderTop: "2.5px solid #FE938C ", marginRight: 100, marginBottom: "10px", marginTop: -10 }}></div>
                                 <div>
                                     <iframe style={{ border: 0, width: "550px", height: "120px", borderRadius: "15px 40px 10px 40px", marginLeft: '4px' }} src="https://bandcamp.com/EmbeddedPlayer/album=810155818/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://kompakt-gas.bandcamp.com/album/pop">Pop by GAS</a></iframe>
@@ -46,7 +43,7 @@ function Gas() {
                         </div>
                         <div>
                             <div className="song-div">
-                                <h2 className="song-title"> GAS - "Zauberberg"</h2>
+                                <h2 className="song-title"> GAS - Zauberberg</h2>
                                 <div style={{ borderTop: "2.5px solid #FE938C ", marginRight: 100, marginBottom: "10px", marginTop: -10 }}></div>
                                 <div>
                                     <iframe style={{ border: 0, width: "550px", height: "120px", borderRadius: "15px 40px 10px 40px", marginLeft: '4px' }} src="https://bandcamp.com/EmbeddedPlayer/album=2303878530/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://kompakt-gas.bandcamp.com/album/zauberberg">Zauberberg by GAS</a></iframe>
@@ -57,8 +54,6 @@ function Gas() {
                     <h1 id="slide-release">
                         // Reviews
                         </h1>
-                     <Review />
-                        
                 </Row>
             </Container>
         </div>
@@ -67,4 +62,4 @@ function Gas() {
     )
 }
 
-export default Gas
+export default Wu

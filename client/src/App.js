@@ -9,15 +9,16 @@ import BandPage from './Components/BandPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from "react";
 import Gas from './Components/Gas';
-// import GiantClaw from './Components/GiantClaw';
-// import Kudzu from './Components/Kudzu';
-// import Mastodon from './Components/Mastodon';
-// import RendezVous from './Components/RendezVous';
-// import Retail from './Components/Retail';
-// import Shh from './Components/Shh';
-// import SweetTrip from './Components/SweetTrip';
-// import Warthog from './Components/Warthog';
-// import Wu from './Components/Wu';
+import GiantClaw from './Components/GiantClaw';
+import Kudzu from './Components/Kudzu';
+import Mastodon from './Components/Mastodon';
+import RendezVous from './Components/RendezVous';
+import Retail from './Components/Retail';
+import Shh from './Components/Shh';
+import SweetTrip from './Components/SweetTrip';
+import Warthog from './Components/Warthog';
+import Wu from './Components/Wu';
+import Review from './Components/Review';
 
 
 function App() {
@@ -39,18 +40,20 @@ function App() {
         <Route path="/artists" element={<Artists bandList={bandList} />} />
         <Route path="/merch" element={<Merch />} />
         <Route path="/gas" element={<Gas />} />
-        <Route path="/giant%20claw" element={<Merch />} />
-        <Route path="/kudzu" element={<Merch />} />
-        <Route path="/mastodon" element={<Merch />} />
-        <Route path="/rendez%20vous" element={<Merch />} />
-        <Route path="/retail" element={<Merch />} />
-        <Route path="/SHXCXCHCXSH" element={<Merch />} />
-        <Route path="/sweet%20trip" element={<Merch />} />
-        <Route path="/warthog" element={<Merch />} />
-        <Route path="/wu-tang%20clan" element={<Merch />} />
+        <Route path="/giant%20claw" element={<GiantClaw />} />
+        <Route path="/kudzu" element={<Kudzu />} />
+        <Route path="/mastodon" element={<Mastodon />} />
+        <Route path="/rendez%20vous" element={<RendezVous />} />
+        <Route path="/retail" element={<Retail />} />
+        <Route path="/SHXCXCHCXSH" element={<Shh />} />
+        <Route path="/sweet%20trip" element={<SweetTrip />} />
+        <Route path="/warthog" element={<Warthog />} />
+        <Route path="/wu-tang%20clan" element={<Wu />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/merch" element={<Merch />} />
         <Route path="/myaccount" element={<MyAccount />} />
+        <Route path="/review" element={<Review />} />
+
 
       </Routes>
     </Router>

@@ -1,12 +1,7 @@
 Rails.application.routes.draw do
   resources :users
   resources :reviews
-  resources :bands
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :bands, only: [:index, :update]
 
 
-  get '/artists/:band_name', to: 'bands#show'
 end

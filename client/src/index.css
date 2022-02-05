@@ -251,9 +251,9 @@ width: 125px;
 
   .drop-down{
     border-bottom: 1.7px outset #000000;
-    /* float: top; */
-    /* border-radius: 0px 0px 30px 30px; */
-    /* background-color: rgba(0, 0, 0, 0.109); */
     margin-top: -30px;
-    /* margin-left: 50px; */
+  }
+
+  .nav-but:hover {
+    transform: scale(1.05);
   }

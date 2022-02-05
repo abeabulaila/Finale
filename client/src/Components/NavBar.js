@@ -25,11 +25,11 @@ function NavBar() {
 
         <div class="container" className="nav-buttons">
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/artists">Artists</Nav.Link>
-            <Nav.Link href="/merch">Merch</Nav.Link>
-            <Nav.Link href="/favorites">Favorites</Nav.Link>
-            <Nav.Link href="/myaccount">My Account</Nav.Link>
+            <Nav.Link className= "nav-but" href="/">Home</Nav.Link>
+            <Nav.Link className= "nav-but" href="/artists">Artists</Nav.Link>
+            <Nav.Link className= "nav-but" href="/merch">Merch</Nav.Link>
+            <Nav.Link className= "nav-but" href="/favorites">Favorites</Nav.Link>
+            <Nav.Link className= "nav-but" href="/myaccount">My Account</Nav.Link>
 
           </Nav>
           </div>
