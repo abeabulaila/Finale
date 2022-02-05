@@ -238,7 +238,6 @@ width: 125px;
   }
   
   @keyframes slide {
-   
     100% { left: 0;}
       
   }
