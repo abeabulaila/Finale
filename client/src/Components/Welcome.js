@@ -8,13 +8,11 @@ function Welcome() {
     return (
         <div>
             <div className="intro">
-                <h1>Infinite Spirit Records</h1>
-                <img className="logo-page" src={logo} />
-                <h4> <em> Home of that good stuff. </em></h4>
+                <h2> <em> "Home of That Good Stuff." </em></h2>
             </div>
             <Container>
                 <Row>
-                    <Col >
+                    <Col>
                         <h1>// News</h1>
 
                     </Col>
@@ -37,6 +35,9 @@ function Welcome() {
                     </Col>
                 </Row>
             </Container>
+            <div className="intro">
+            <img className="logo-page" src={logo} />
+            </div>
         </div>
     )
 }
