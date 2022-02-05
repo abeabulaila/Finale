@@ -11,6 +11,8 @@ b6 = Band.create(band_name: "Retail", album: "Dead", genre: "Punk", img: "https:
 b7 = Band.create(band_name: "SHXCXCHCXSH", album: "Entering The S-Cloud", genre: "Ambient/Experimental", img: "https://lastfm.freetls.fastly.net/i/u/770x0/1d8ffff7ba7b1af51015ba28335f7c81.jpg")
 b8 = Band.create(band_name: "Sweet Trip", album: "Velocity:Design:Comfort", genre: "Shoegaze", img: "https://cdn.shopify.com/s/files/1/0961/0594/products/DRL136_3000x3000_RGB.jpg?v=1574295316")
 b9 = Band.create(band_name: "Warthog", album: "Warthog", genre: "Hardcore Punk", img: "https://f4.bcbits.com/img/a1029186125_10.jpg")
+b10 = Band.create(band_name: "Wu-Tang Clan", album: "Enter The Wu-Tang", genre: "Hip Hop", img: "https://blog.discogs.com/wp-content/uploads/2017/04/R-153749-1185134135.jpeg.jpg")
+
 
 
 

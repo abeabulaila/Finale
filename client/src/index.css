@@ -18,7 +18,8 @@ h1{
 .review-div{
   width: 600px;
   background-color: rgba(255, 254, 254, 0.623);
-  border-radius: 100px 10px 40px 10px;
+  /* border-radius: 100px 10px 40px 10px; */
+  border-radius: 40px;
   box-shadow: 3px 3px rgb(119, 72, 72), -0.5em 0 .4em rgba(71, 44, 13, 0.7);
   margin-top: 20px;
   margin-bottom: 60px;
@@ -30,6 +31,8 @@ h1{
   margin-bottom: 60px;
   background-color: rgba(255, 254, 254, 0.623);
   border-radius: 10px 100px 10px 40px;
+    /* border-radius: 40px; */
+
   box-shadow: 3px 3px rgb(119, 72, 72), 1em 0 .4em rgba(71, 44, 13, 0.7);
   box-shadow: -3px 3px rgb(119, 72, 72), 0.5em 0 .4em rgb(71, 44, 13, 0.7);
 
@@ -61,13 +64,13 @@ margin-left: 10px;
 }
 
 .logo-page{
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
 }
 
 .band-img{
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   box-shadow: 11px 4px 13px black;
   margin-bottom: 15px;
 
@@ -79,11 +82,11 @@ margin-left: 10px;
 
 .band-div{
   justify-content:center;
-  width: 500px;
+  /* width: 1000px; */
   /* margin: auto; */
   display:inline-block;
   margin-bottom: 100px;
-  margin-left: 250px;
+  margin-left: 100px;
 
 }
 
