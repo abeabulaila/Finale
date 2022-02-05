@@ -86,7 +86,8 @@ margin-left: 10px;
   /* margin: auto; */
   display:inline-block;
   margin-bottom: 100px;
-  margin-left: 100px;
+  margin-left: 150px;
+  width: 350px
 
 }
 
@@ -186,3 +187,12 @@ font-size: 3.5em;
 @keyframes slider-in {
   100% { right: 0; }
 }
+
+.artist-line{
+border-top: 2.5px solid #FE938C;
+margin-right: 330px;
+margin-bottom: 15px;
+margin-top: -10px;
+width: 125px;
+}
+

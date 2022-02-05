@@ -17,7 +17,9 @@ function BandCard({ bandName, album, genre, img }) {
     return (
         <div className="band-div">
             <h2>{bandName}</h2>
-            <div style={{ borderTop: "2.5px solid #FE938C ", marginRight: 330, marginBottom: "15px", marginTop: -10  }}></div>
+            <div className="artist-line"></div>
+            <>
+            </>
             <img onClick={onClick} className="band-img" src={img} />
             <h4 style={{marginTop: '-5px'}} >{album}</h4>
             <h6 style={{marginTop: '-10px'}}><em> {genre} </em></h6>
