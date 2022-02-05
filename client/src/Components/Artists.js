@@ -6,7 +6,7 @@ function Artists({bandList}) {
 
     return (
         <div>
-            <div id="slide" className="capture">
+            <div id="slide-artist" className="capture">
             <h1 className="capture-title"> All Artists</h1>
             </div>
             <div className="band-holder">

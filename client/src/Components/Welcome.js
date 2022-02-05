@@ -13,11 +13,11 @@ function Welcome() {
             <Container>
                 <Row>
                     <Col>
-                        <h1>// News</h1>
+                        <h1 id="slide">// News</h1>
 
                     </Col>
                     <Col>
-                        <h1>
+                        <h1 id="slide-release">
                             // New Releases
                         </h1>
                     </Col>

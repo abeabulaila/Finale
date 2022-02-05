@@ -159,8 +159,8 @@ font-size: 3.5em;
   left: -1000px;
   -webkit-animation: slide 0.4s forwards;
   -webkit-animation-delay: 1s;
-  animation: slide 0.5s forwards;
-  animation-delay: 0.5s;
+  animation: slide 1.5s forwards;
+  animation-delay: 0.76s;
 }
 
 @-webkit-keyframes slide {
@@ -168,15 +168,20 @@ font-size: 3.5em;
 }
 
 @keyframes slide {
-  100% { left: 0; }
-}
+  33%{
+    color:rgba(0, 0, 0, 0)
+  }
+  100% { left: 0; 
+    color: rgb(22, 22, 22);
+  }}
+
 
 #slider {
   position:absolute;
   right: -1000px;
   -webkit-animation: slider-in 0.4s forwards;
   -webkit-animation-delay: 1s;
-  animation: slider-in 0.5s forwards;
+  animation: slider-in 1.5s forwards;
   animation-delay: 2s;
 }
 
@@ -196,3 +201,45 @@ margin-top: -10px;
 width: 125px;
 }
 
+#slide-release{
+  position:relative;
+  right: -1500px;
+  -webkit-animation: slide-release 0.4s forwards;
+  -webkit-animation-delay: 1s;
+  animation: slide-release 2s forwards;
+  animation-delay: 0.1s;
+  color: #FE938C;
+}
+
+@-webkit-keyframes slide-release {
+
+}
+
+@keyframes slide-release {
+  33%{
+    color:rgba(0, 0, 0, 0)
+  }
+  100% { right: 0; 
+    color: rgb(22, 22, 22);
+  }}
+
+
+  #slide-artist {
+    position:relative;
+    left: -1000px;
+    -webkit-animation: slide 0.4s forwards;
+    -webkit-animation-delay: 1s;
+    animation: slide 1.5s forwards;
+    animation-delay: 0.76s;
+  }
+  
+  @-webkit-keyframes slide {
+    100% { left: 0; }
+  }
+  
+  @keyframes slide {
+   
+    100% { left: 0;}
+      
+  }
+  
