@@ -148,11 +148,13 @@ font-size: 3.5em;
   /* border-radius: 40px; */
   border-radius: 300px 10px 300px 10px;
 }
-/* 
+ 
 .nav-buttons{
-    background-color: rgba(0, 0, 0, 0.109);
-  border-radius: 300px 10px 300px 10px;
-} */
+  margin-left: 20px;
+    /* background-color: rgba(0, 0, 0, 0.109); */
+  border-radius: 0px 0px 30px 30px;
+  margin-top: 30px
+} 
 
 #slide {
   position:relative;
@@ -242,3 +244,16 @@ width: 125px;
       
   }
   
+  .artist-title{
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .drop-down{
+    border-bottom: 1.7px outset #000000;
+    /* float: top; */
+    /* border-radius: 0px 0px 30px 30px; */
+    /* background-color: rgba(0, 0, 0, 0.109); */
+    margin-top: -30px;
+    /* margin-left: 50px; */
+  }

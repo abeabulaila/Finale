@@ -21,6 +21,8 @@ function NavBar() {
         </div>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
+          <div className="drop-down">
+
         <div class="container" className="nav-buttons">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
@@ -30,6 +32,7 @@ function NavBar() {
             <Nav.Link href="/myaccount">My Account</Nav.Link>
 
           </Nav>
+          </div>
           </div>
         </Navbar.Collapse>
       </Container>

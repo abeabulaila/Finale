@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from 'react-router-dom'
 
 
-function BandCard({ bandName, album, genre, img }) {
+function BandCard({ bandName, album, genre, img,  }) {
     let navigate = useNavigate();
 
 
