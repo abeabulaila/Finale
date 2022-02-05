@@ -6,8 +6,10 @@ function NavBar() {
 
 
   return (
-    <Navbar bg="dark" variant={"dark"} expand="lg">
+    <Navbar>
       <Container>
+        <div className="nav-div">
+
         <Navbar.Brand href="/">Infinite Spirit Records {" "}
           {/* <img
             src={logo}
@@ -16,9 +18,10 @@ function NavBar() {
             className="d-inline-block align-top"
             alt="infinite spirit logo" /> */}
         </Navbar.Brand>
+        </div>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-        <div class="container">
+        <div class="container" className="nav-buttons">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/artists">Artists</Nav.Link>

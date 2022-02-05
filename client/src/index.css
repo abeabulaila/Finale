@@ -138,3 +138,14 @@ font-size: 3.5em;
   margin-right: auto;
 
 }
+
+.nav-div{
+  background-color: rgba(0, 0, 0, 0.109);
+  /* border-radius: 40px; */
+  border-radius: 300px 10px 300px 10px;
+}
+/* 
+.nav-buttons{
+    background-color: rgba(0, 0, 0, 0.109);
+  border-radius: 300px 10px 300px 10px;
+} */
