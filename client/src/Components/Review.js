@@ -27,8 +27,7 @@ function Review() {
                     onChange={e => setTitle(e.target.value)}
                     required />
             </label>
-<br>
-</br>
+<br></br>
             <label>
                 Description:
                 <input
