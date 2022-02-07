@@ -1,8 +1,21 @@
 import React from "react";
 import { Navbar, Container, Nav } from 'react-bootstrap';
+import { useNavigate } from "react-router-dom";
 import logo from '/home/abeab/Development/code/P5/finale/client/src/Components/Images/recordlogo.png'
 
-function NavBar() {
+function NavBar( {currentUser} ) {
+  let navigate = useNavigate();
+
+  function handleLogout() {
+    fetch("/logout", { 
+        method: 'DELETE'
+      }
+      
+      )
+      navigate('/')
+      alert('Logged Out!')
+}
+
 
 
   return (
@@ -30,6 +43,9 @@ function NavBar() {
             <Nav.Link className= "nav-but" href="/merch">Merch</Nav.Link>
             <Nav.Link className= "nav-but" href="/favorites">Favorites</Nav.Link>
             <Nav.Link className= "nav-but" href="/myaccount">My Account</Nav.Link>
+            {currentUser ? <Nav.Link className= "nav-but" href="/" onClick={handleLogout} >Log Out</Nav.Link> : <Nav.Link className= "nav-but" href="/login">Log In</Nav.Link>  }
+
+
 
           </Nav>
           </div>

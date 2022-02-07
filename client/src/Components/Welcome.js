@@ -11,9 +11,7 @@ function Welcome() {
             <div className="intro">
                 <h2> <em> "Home of That Good Stuff." </em></h2>
             </div>
-            <div>
-                <LoginForm />
-            </div>
+           
             <Container>
                 <Row>
                     <Col>

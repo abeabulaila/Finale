@@ -62,7 +62,7 @@ const SignupForm = () => {
         <br />
         <button type="submit">Submit</button>
       </form>
-      <Link to="/" replace>
+      <Link to="/login" replace>
         Have an account already? Log in!
       </Link>
     </>

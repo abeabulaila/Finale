@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+    let navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -28,12 +31,18 @@ const LoginForm = () => {
     })
       .then((r) => r.json())
       .then((user) => {
-        console.log(user);
+          console.log(user);
+          if (userCreds) {
+            navigate('/')
+            alert('Logged In!'
+            )          }
         setFormData({
           username: "",
           password: "",
         });
-      });
+
+    });
+    
   }
 
   return (

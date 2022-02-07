@@ -20,6 +20,7 @@ import Warthog from './Components/Warthog';
 import Wu from './Components/Wu';
 import Review from './Components/Review';
 import SignupForm from './Components/SignupForm';
+import LoginForm from './Components/LoginForm';
 function App() {
   const [bandList, setBandList] = useState([{}])
 
@@ -37,18 +38,23 @@ function App() {
     });
   }, []);
 
+  
+  
+  useEffect(() => {
+    fetch('/bands')
+    .then(r => r.json())
+    .then(data => setBandList(data))
+
+  }, [])
+  
   console.log(currentUser)
-
-
-    useEffect(() => {
-        fetch('/bands')
-            .then(r => r.json())
-            .then(data => setBandList(data))
-
-    }, [])
-
-
-
+  
+  // if (!isAuthenticated) {
+  //   return <div>
+  // signup here........... put this for reviews maybe ?
+  // </div>;
+  // }
+  
 
 
 
@@ -56,7 +62,7 @@ function App() {
 
   return (
     <Router>
-      <NavBar />
+      <NavBar currentUser={currentUser} />
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="/artists" element={<Artists bandList={bandList} />} />
@@ -76,6 +82,7 @@ function App() {
         <Route path="/myaccount" element={<MyAccount />} />
         <Route path="/review" element={<Review />} />
         <Route path="/signup" element={<SignupForm />} />
+        <Route path="/login" element={<LoginForm currentUser={currentUser} setCurrentUser={setCurrentUser} />} />
 
 
       </Routes>
