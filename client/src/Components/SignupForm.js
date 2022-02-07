@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import {Link} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
-const SignupForm = () => {
+const SignupForm = ({onLogin}) => {
+  let navigate = useNavigate();
+  const [errors, setErrors] = useState([]);
+
+
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -14,30 +19,29 @@ const SignupForm = () => {
     });
   };
 
+
   function handleSubmit(e) {
     e.preventDefault();
-
-    const userCreds = { ...formData };
-
     fetch("/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(userCreds),
-    })
-      .then((r) => r.json())
-      .then((user) => {
-        console.log(user);
-        setFormData({
-          username: "",
-          password: "",
-        });
-      });
-  }
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+    }).then((r) => {
+        if (r.ok) {
+            r.json().then((user) => onLogin(user));
+            navigate("/")
+        } else {
+            r.json().then((err) => setErrors(err.errors));
+            alert("Username must be unique")
+        }
+    });
+}
+
 
   return (
-    <>
+    <div className="logform">
       <h1>Signup Here!</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Username: </label>
@@ -65,7 +69,7 @@ const SignupForm = () => {
       <Link to="/login" replace>
         Have an account already? Log in!
       </Link>
-    </>
+    </div>
   );
 };
 

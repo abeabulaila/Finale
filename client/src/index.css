@@ -257,3 +257,10 @@ width: 125px;
   .nav-but:hover {
     transform: scale(1.05);
   }
+
+  .logform{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }

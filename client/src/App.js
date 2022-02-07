@@ -44,9 +44,15 @@ function App() {
     fetch('/bands')
     .then(r => r.json())
     .then(data => setBandList(data))
-
+    
   }, [])
-  
+ 
+
+  // if(currentUser) {
+  //  alert(`Welcome, ${currentUser.username}!`)
+  // } else {
+  //   <LoginForm onLogin={setCurrentUser} />
+  // }
   console.log(currentUser)
   
   // if (!isAuthenticated) {
@@ -81,8 +87,8 @@ function App() {
         <Route path="/merch" element={<Merch />} />
         <Route path="/myaccount" element={<MyAccount />} />
         <Route path="/review" element={<Review />} />
-        <Route path="/signup" element={<SignupForm />} />
-        <Route path="/login" element={<LoginForm currentUser={currentUser} setCurrentUser={setCurrentUser} />} />
+        <Route path="/signup" element={<SignupForm onLogin={setCurrentUser} />} />
+        <Route path="/login" element={<LoginForm currentUser={currentUser} onLogin={setCurrentUser}  />} />
 
 
       </Routes>

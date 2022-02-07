@@ -12,12 +12,16 @@ class UsersController < ApplicationController
         render json: "No one is logged in", status: :unauthorized
       end
     end
+
   
     def create
       user = User.create!(user_params)
-      session[:user_id] = user.id
+       if user.valid?
       render json: user, status: :created
+    else
+      render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
     end
+  end
   
     def destroy
       user = User.find(params[:id])
