@@ -11,12 +11,11 @@ function Welcome() {
             <div className="intro">
                 <h2> <em> "Home of That Good Stuff." </em></h2>
             </div>
-           
+         
             <Container>
                 <Row>
                     <Col>
                         <h1 id="slide">// News</h1>
-
                     </Col>
                     <Col>
                         <h1 id="slide-release">

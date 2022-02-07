@@ -16,8 +16,6 @@ function NavBar( {currentUser} ) {
       alert('Logged Out!')
 }
 
-
-
   return (
     <Navbar>
       <Container>
@@ -44,9 +42,6 @@ function NavBar( {currentUser} ) {
             <Nav.Link className= "nav-but" href="/favorites">Favorites</Nav.Link>
             <Nav.Link className= "nav-but" href="/myaccount">My Account</Nav.Link>
             {currentUser ? <Nav.Link className= "nav-but" href="/" onClick={handleLogout} >Log Out</Nav.Link> : <Nav.Link className= "nav-but" href="/login">Log In</Nav.Link>  }
-
-
-
           </Nav>
           </div>
           </div>
