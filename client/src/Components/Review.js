@@ -1,18 +1,26 @@
 import React from "react";
 import { useState } from "react";
 function Review() {
+     const [formData, setFormData] = useState({
+        title: "",
+        content: ""
+    })
 
-    const [title, setTitle] = useState("");
-    const [description, setDescription] = useState("");
+    function manageFormData(event) {
+        const key = event.target.name;
+        setFormData({
+            ...formData,
+            [key]: event.target.value
+        })
+    }
 
-    const handleSubmit = (e) => {
+
+    function handleSubmit(e) {
         e.preventDefault();
-        console.log(`
-        Title: ${title}
-        Description: ${description}
-      `);
 
     }
+
+
 
     return (
         <form onSubmit={handleSubmit}>
@@ -23,18 +31,18 @@ function Review() {
                 <input
                     name="title"
                     type="title"
-                    value={title}
-                    onChange={e => setTitle(e.target.value)}
+                    value={formData.title}
+                    onChange={manageFormData}
                     required />
             </label>
 <br></br>
             <label>
                 Description:
                 <input
-                    name="description"
-                    type="description"
-                    value={description}
-                    onChange={e => setDescription(e.target.value)}
+                    name="content"
+                    type="content"
+                    value={formData.content}
+                    onChange={manageFormData}
                     required />
             </label>
             <button>Submit</button>

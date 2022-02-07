@@ -19,10 +19,26 @@ import SweetTrip from './Components/SweetTrip';
 import Warthog from './Components/Warthog';
 import Wu from './Components/Wu';
 import Review from './Components/Review';
-
-
+import SignupForm from './Components/SignupForm';
 function App() {
   const [bandList, setBandList] = useState([{}])
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [currentUser, setCurrentUser] = useState(null);
+
+  useEffect(() => {
+    fetch("/me").then((res) => {
+      if (res.ok) {
+        res.json().then((user) => {
+          setCurrentUser(user);
+          setIsAuthenticated(true);
+        });
+      }
+    });
+  }, []);
+
+  console.log(currentUser)
+
 
     useEffect(() => {
         fetch('/bands')
@@ -30,6 +46,12 @@ function App() {
             .then(data => setBandList(data))
 
     }, [])
+
+
+
+
+
+
 
 
   return (
@@ -53,6 +75,7 @@ function App() {
         <Route path="/merch" element={<Merch />} />
         <Route path="/myaccount" element={<MyAccount />} />
         <Route path="/review" element={<Review />} />
+        <Route path="/signup" element={<SignupForm />} />
 
 
       </Routes>

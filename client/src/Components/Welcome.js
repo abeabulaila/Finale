@@ -3,12 +3,16 @@ import ReviewHolder from "./ReviewHolder";
 import SongHolder from "./SongHolder";
 import { Container, Row, Col } from 'react-bootstrap'
 import logo from "./Images/recordlogo.png"
+import LoginForm from "./LoginForm";
 function Welcome() {
 
     return (
         <div>
             <div className="intro">
                 <h2> <em> "Home of That Good Stuff." </em></h2>
+            </div>
+            <div>
+                <LoginForm />
             </div>
             <Container>
                 <Row>
