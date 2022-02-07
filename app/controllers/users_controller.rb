@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   
     def show
       if current_user
-        render json: current_user, status: :ok
+        render json: current_user, include: :reviews, status: :ok
       else
         render json: "No one is logged in", status: :unauthorized
       end

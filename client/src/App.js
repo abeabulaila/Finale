@@ -73,7 +73,7 @@ function App() {
         <Route path="/" element={<Welcome />} />
         <Route path="/artists" element={<Artists bandList={bandList} />} />
         <Route path="/merch" element={<Merch />} />
-        <Route path="/gas" element={<Gas />} />
+        <Route path="/gas" element={<Gas currentUser={currentUser} />} />
         <Route path="/giant%20claw" element={<GiantClaw />} />
         <Route path="/kudzu" element={<Kudzu />} />
         <Route path="/mastodon" element={<Mastodon />} />
@@ -86,11 +86,9 @@ function App() {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/merch" element={<Merch />} />
         <Route path="/myaccount" element={<MyAccount />} />
-        <Route path="/review" element={<Review />} />
+        <Route path="/review" element={<Review currentUser={currentUser} />} />
         <Route path="/signup" element={<SignupForm onLogin={setCurrentUser} />} />
         <Route path="/login" element={<LoginForm currentUser={currentUser} onLogin={setCurrentUser}  />} />
-
-
       </Routes>
     </Router>
   );

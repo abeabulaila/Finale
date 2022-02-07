@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col } from 'react-bootstrap'
 import Review from "./Review";
 import { useState } from "react";
-function Gas() {
+
+function Gas({currentUser}) {
+    const [band, setBand] = useState({})
   
-
-
-
-
+    useEffect(() => {
+        fetch('/bands/36')
+        .then(r => r.json())
+        .then(data => setBand(data))
+    }, [])
+    
+    console.log(band.id)
+  
 
     return (
         <div>
@@ -60,7 +66,7 @@ function Gas() {
                     <h1 id="slide-release">
                         // Reviews
                         </h1>
-                     <Review />
+                     <Review band={band.id} currentUser={currentUser} />
                         
                 </Row>
             </Container>

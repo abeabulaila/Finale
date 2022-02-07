@@ -6,7 +6,7 @@ class ApplicationController < ActionController::API
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
   private
-  
+
   def authenticate_user
     return render json: { error: "Not authorized" }, status: :unauthorized unless current_user
   end
@@ -16,7 +16,7 @@ class ApplicationController < ActionController::API
   end
 
   def record_not_found(error)
-    render json: { error: error.msg }, status: :unprocessable_entity
+    render json: { error: error.message }, status: :unprocessable_entity
   end
 
   def current_user
