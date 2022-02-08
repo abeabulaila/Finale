@@ -39,7 +39,7 @@ function App() {
   
   
   useEffect(() => {
-    fetch('/bands')
+    fetch('/api/bands')
     .then(r => r.json())
     .then(data => setBandList(data))
     
@@ -51,7 +51,7 @@ function App() {
   // } else {
   //   <LoginForm onLogin={setCurrentUser} />
   // }
-  console.log(currentUser)
+  // console.log(currentUser)
   
   // if (!isAuthenticated) {
   //   return <div>

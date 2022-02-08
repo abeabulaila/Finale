@@ -3,27 +3,52 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ReviewCard from "./ReviewCard";
 
-function Review({ currentUser, band }) {
+function Review({ currentUser, band, reviews }) {
     // let navigate = useNavigate();
+    // const [isLoading, setIsLoading] = useState(false);
+
     const [errors, setErrors] = useState([]);
-    const [review, setReview] = useState({})
+    const [newReview, setNewReview] = useState({})
     const [formData, setFormData] = useState({
         title: "",
         description: ""
     })
+    const [allReviews, setAllReviews] = useState([])
 
-    const [allReviews, setAllReviews] = useState([{}])
-
+    const thisBand=band.id
 
     useEffect(() => {
-        fetch(`/bands/${band}`)
+        fetch(`/api/bands/${band.id}`)
+        // setIsLoading(true)
             .then(r => r.json())
             .then(data => setAllReviews(data.reviews))
+            // .then(renderBand)
+            // setIsLoading(false)
+        }, [])
 
 
-    }, [])
 
+        
+            {reviews.map(rev => {
+                return (
+                    <ReviewCard
+                        key={rev.id}
+                        title={rev.title}
+                        description={rev.description}
+                    />
+                )
+            })
+            } 
+    
+    
+        
+        // setAllReviews(band.reviews)
+    
+    // console.log(allReviews)
 
+    // setAllReviews(band.reviews)
+
+    console.log(allReviews)
 
 
     function manageFormData(event) {
@@ -42,7 +67,7 @@ function Review({ currentUser, band }) {
         const band_id = band
         const title = formData.title
         const description = formData.description
-        fetch("/reviews", {
+        fetch("/api/reviews", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -51,14 +76,13 @@ function Review({ currentUser, band }) {
 
         }).then((r) => {
             if (r.ok) {
-                r.json().then((rev) => setReview(rev));
+                r.json().then((rev) => setNewReview(rev));
             } else {
                 r.json().then((err) => setErrors(err.errors));
                 alert("Must be logged in for this feature")
             }
         });
     }
-    console.log(allReviews)
 
 
 
@@ -68,16 +92,18 @@ function Review({ currentUser, band }) {
     return (
         <div>
             <div>
-                {/* {allReviews.map(rev => {
-                    return (
-                        <ReviewCard
-                            title={rev.title}
-                            description={rev.description}
-                        />
-                    )
-                })
-                } */}
 
+            {reviews.map(rev => {
+                return (
+                    <ReviewCard
+                        key={rev.id}
+                        title={rev.title}
+                        description={rev.description}
+                    />
+                )
+            })
+            } 
+    
             </div>
             <form onSubmit={handleSubmit}>
                 <h1>Leave a Review!</h1>

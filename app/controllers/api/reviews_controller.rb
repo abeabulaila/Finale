@@ -1,4 +1,4 @@
-class ReviewsController < ApplicationController
+class Api::ReviewsController < ApplicationController
   skip_before_action :authenticate_user, only: [:index, :show]
 
   def index
@@ -16,7 +16,7 @@ class ReviewsController < ApplicationController
 
   def show
     bandReview = Review.find_by(params[:band_id])
-    render json: bandReview, status: ok
+    render json: bandReview, status: :ok
   end
 
   def destroy

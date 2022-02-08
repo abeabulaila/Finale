@@ -4,13 +4,21 @@ import Review from "./Review";
 import { useState } from "react";
 
 function Gas({currentUser}) {
-    const [band, setBand] = useState({})
+    const [band, setBand] = useState({reviews: []})
+    // const [reviews, setReviews] = useState({})
   
+
+    
     useEffect(() => {
-        fetch('/bands/36')
+        fetch('/api/bands/36')
         .then(r => r.json())
         .then(data => setBand(data))
+        //.then(setReviews(band.reviews))
     }, [])
+    
+   
+
+    console.log(band.reviews)
       
     return (
         <div>
@@ -63,7 +71,7 @@ function Gas({currentUser}) {
                     <h1 id="slide-release">
                         // Reviews
                         </h1>
-                     <Review band={band.id} currentUser={currentUser} />
+                     <Review band={band} reviews={band.reviews} currentUser={currentUser} />
                         
                 </Row>
             </Container>

@@ -1,7 +1,10 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do 
+  namespace :api do
+    resources :reviews
+    resources :bands, only: [:index, :update, :show]
+  end
+
   resources :users
-  resources :reviews
-  resources :bands, only: [:index, :update, :show]
 
   get '/me', to: "users#show"
   post '/login', to: "sessions#create"

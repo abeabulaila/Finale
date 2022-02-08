@@ -1,4 +1,4 @@
-class BandsController < ApplicationController
+class Api::BandsController < ApplicationController
     skip_before_action :authenticate_user
 
     def index
@@ -7,7 +7,7 @@ class BandsController < ApplicationController
     end
 
     def show
-        band = Band.find(params[:id])
+        band = Band.find_by(params[:id])
         render json: band, include: :reviews, status: :ok
     end
 
