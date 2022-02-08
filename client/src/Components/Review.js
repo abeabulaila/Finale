@@ -13,23 +13,16 @@ function Review({ currentUser, band }) {
     })
 
     const [allReviews, setAllReviews] = useState([{}])
+
+
     useEffect(() => {
         fetch(`/bands/${band}`)
             .then(r => r.json())
             .then(data => setAllReviews(data.reviews))
 
+
     }, [])
 
-    //   function showReviews(){
-    //     allReviews.map(rev => {
-    //         return(
-    //             <ReviewCard
-    //             title={rev.title}
-    //             description={rev.description}
-    //             />
-    //         )
-    //     })
-    //   }
 
 
 
@@ -56,11 +49,9 @@ function Review({ currentUser, band }) {
             },
             body: JSON.stringify({ title, description, user_id, band_id }),
 
-
-
         }).then((r) => {
             if (r.ok) {
-            r.json().then((rev) => setReview(rev));
+                r.json().then((rev) => setReview(rev));
             } else {
                 r.json().then((err) => setErrors(err.errors));
                 alert("Must be logged in for this feature")
@@ -86,6 +77,7 @@ function Review({ currentUser, band }) {
                     )
                 })
                 } */}
+
             </div>
             <form onSubmit={handleSubmit}>
                 <h1>Leave a Review!</h1>

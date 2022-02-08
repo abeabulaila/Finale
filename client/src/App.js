@@ -85,7 +85,7 @@ function App() {
         <Route path="/wu-tang%20clan" element={<Wu />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/merch" element={<Merch />} />
-        <Route path="/myaccount" element={<MyAccount />} />
+        <Route path="/myaccount" element={<MyAccount setCurrentUser={setCurrentUser} />} />
         <Route path="/review" element={<Review currentUser={currentUser} />} />
         <Route path="/signup" element={<SignupForm onLogin={setCurrentUser} />} />
         <Route path="/login" element={<LoginForm currentUser={currentUser} onLogin={setCurrentUser}  />} />

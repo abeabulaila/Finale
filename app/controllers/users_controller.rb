@@ -13,6 +13,14 @@ class UsersController < ApplicationController
       end
     end
 
+    def update
+      if current_user
+        current_user.update!(user_params)
+        render json: current_user, status: :ok
+      else
+        render json: "Not authenticated", status: :unauthorized
+      end
+    end
   
     def create
       user = User.create!(user_params)
@@ -34,7 +42,7 @@ class UsersController < ApplicationController
     private
   
     def user_params
-      params.permit(:username, :password)
+      params.permit(:username, :password, :bio)
     end
   end
   
