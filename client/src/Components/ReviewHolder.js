@@ -44,6 +44,31 @@ function ReviewHolder() {
                 </div>
             </div>
 
+            <div className="review-div">
+                <div >
+                    <h2 className="review-title"> Scouting For New Artists </h2>
+                    <div style={{ borderTop: "2.5px solid #FE938C ", marginRight: 50, marginLeft: 30, marginBottom: "10px", marginTop: -10 }}>
+                    </div>
+                </div >
+                <div >
+                    <p className="review-text"> Submit your music here for consideration to join our label. Join a strong network of talented artists and build connections to further your career!
+                    </p>
+                </div>
+            </div>
+
+            <div className="review-div">
+                <div >
+                    <h2 className="review-title"> Welcome the Wu </h2>
+                    <div style={{ borderTop: "2.5px solid #FE938C ", marginRight: 50, marginLeft: 30, marginBottom: "10px", marginTop: -10 }}>
+                    </div>
+                </div >
+                <div >
+                    <p className="review-text"> It is with great enthusiasm that we share our latest news: we have partnered with Wu-Tang Clan to distribute their upcoming album. Infinite Spirit welcomes the Wu with open arms. 	
+&#128588;
+                    </p>
+                </div>
+            </div>
+
 
         </div>
     )

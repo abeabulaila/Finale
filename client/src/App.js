@@ -1,11 +1,9 @@
 import './App.css';
 import Welcome from './Components/Welcome';
 import Artists from './Components/Artists';
-import Favorites from './Components/Favorites';
 import Merch from './Components/Merch';
 import MyAccount from './Components/MyAccount';
 import NavBar from './Components/NavBar';
-import BandPage from './Components/BandPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from "react";
 import Gas from './Components/Gas';
@@ -83,7 +81,6 @@ function App() {
         <Route path="/sweet%20trip" element={<SweetTrip />} />
         <Route path="/warthog" element={<Warthog />} />
         <Route path="/wu-tang%20clan" element={<Wu />} />
-        <Route path="/favorites" element={<Favorites />} />
         <Route path="/merch" element={<Merch />} />
         <Route path="/myaccount" element={<MyAccount setCurrentUser={setCurrentUser} />} />
         <Route path="/review" element={<Review currentUser={currentUser} />} />
