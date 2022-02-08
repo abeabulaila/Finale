@@ -1,18 +1,37 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import ReviewCard from "./ReviewCard";
 
 function Review({ currentUser, band }) {
     // let navigate = useNavigate();
     const [errors, setErrors] = useState([]);
-    // const [review, setReview] = useState([])
-     const [formData, setFormData] = useState({
+    const [review, setReview] = useState({})
+    const [formData, setFormData] = useState({
         title: "",
         description: ""
     })
 
+    const [allReviews, setAllReviews] = useState([{}])
+    useEffect(() => {
+        fetch(`/bands/${band}`)
+            .then(r => r.json())
+            .then(data => setAllReviews(data.reviews))
 
-    const thisUser = currentUser.id
+    }, [])
+
+    //   function showReviews(){
+    //     allReviews.map(rev => {
+    //         return(
+    //             <ReviewCard
+    //             title={rev.title}
+    //             description={rev.description}
+    //             />
+    //         )
+    //     })
+    //   }
+
+
 
     function manageFormData(event) {
         const key = event.target.name;
@@ -35,54 +54,63 @@ function Review({ currentUser, band }) {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({title, description, user_id, band_id}),
+            body: JSON.stringify({ title, description, user_id, band_id }),
 
-         
+
 
         }).then((r) => {
-            // if (r.ok) {
-                r.json().then((rev) => console.log(rev));
-            // } else {
-            //     r.json().then((err) => setErrors(err.errors));
-            //     alert("Must be logged in for this feature")
-            // }
+            if (r.ok) {
+            r.json().then((rev) => setReview(rev));
+            } else {
+                r.json().then((err) => setErrors(err.errors));
+                alert("Must be logged in for this feature")
+            }
         });
     }
+    console.log(allReviews)
 
 
-    // function showReview() {
-    //     fetch('/reviews')
-    //         .then(r => r.json())
-    //         .then(data => setAllReviews(data))
-    // }
+
+    //render review card for each review so that it populates accordingly
 
 
     return (
-        <div> 
-                <form onSubmit={handleSubmit}>
-                    <h1>Leave a Review!</h1>
+        <div>
+            <div>
+                {/* {allReviews.map(rev => {
+                    return (
+                        <ReviewCard
+                            title={rev.title}
+                            description={rev.description}
+                        />
+                    )
+                })
+                } */}
+            </div>
+            <form onSubmit={handleSubmit}>
+                <h1>Leave a Review!</h1>
 
-                    <label>
-                        Title:
-                        <input
-                            name="title"
-                            type="title"
-                            value={formData.title}
-                            onChange={manageFormData}
-                            required />
-                    </label>
-                    <br></br>
-                    <label>
-                        Description:
-                        <input
-                            name="description"
-                            type="description"
-                            value={formData.description}
-                            onChange={manageFormData}
-                            required />
-                    </label>
-                    <button>Submit</button>
-                </form>
+                <label>
+                    Title:
+                    <input
+                        name="title"
+                        type="title"
+                        value={formData.title}
+                        onChange={manageFormData}
+                        required />
+                </label>
+                <br></br>
+                <label>
+                    Description:
+                    <input
+                        name="description"
+                        type="description"
+                        value={formData.description}
+                        onChange={manageFormData}
+                        required />
+                </label>
+                <button>Submit</button>
+            </form>
 
         </div>
     );

@@ -11,10 +11,7 @@ function Gas({currentUser}) {
         .then(r => r.json())
         .then(data => setBand(data))
     }, [])
-    
-    console.log(band.id)
-  
-
+      
     return (
         <div>
             <Container>
