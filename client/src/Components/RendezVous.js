@@ -10,7 +10,6 @@ function RendezVous({currentUser}) {
         fetch('/bands/71')
         .then(r => r.json())
         .then(data => setBand(data))
-        //.then(setReviews(band.reviews))
     }, [])
     
     return (
