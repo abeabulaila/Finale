@@ -6,7 +6,7 @@ import { useState } from "react";
 function Gas({currentUser}) {
     const [band, setBand] = useState({reviews: []})
     useEffect(() => {
-        fetch('/bands/36')
+        fetch('/bands/67')
         .then(r => r.json())
         .then(data => setBand(data))
     }, [])

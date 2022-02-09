@@ -7,7 +7,7 @@ function Retail({currentUser}) {
     const [band, setBand] = useState({reviews: []})
  
     useEffect(() => {
-        fetch('/bands/41')
+        fetch('/bands/72')
         .then(r => r.json())
         .then(data => setBand(data))
     }, [])

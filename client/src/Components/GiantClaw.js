@@ -6,7 +6,7 @@ function GiantClaw({currentUser}) {
   const [band, setBand] = useState({reviews: []})
     
     useEffect(() => {
-        fetch('/bands/37')
+        fetch('/bands/68')
         .then(r => r.json())
         .then(data => setBand(data))
     }, [])

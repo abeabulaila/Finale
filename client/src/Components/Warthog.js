@@ -6,7 +6,7 @@ import Review from "./Review"
 function Warthog({ currentUser }) {
     const [band, setBand] = useState({ reviews: [] })
     useEffect(() => {
-        fetch('/bands/44')
+        fetch('/bands/75')
             .then(r => r.json())
             .then(data => setBand(data))
     }, [])

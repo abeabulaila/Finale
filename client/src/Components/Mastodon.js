@@ -7,7 +7,7 @@ function Mastodon({currentUser}) {
     const [band, setBand] = useState({reviews: []})
 
     useEffect(() => {
-        fetch('/bands/39')
+        fetch('/bands/70')
         .then(r => r.json())
         .then(data => setBand(data))
         //.then(setReviews(band.reviews))

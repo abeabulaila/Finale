@@ -15,7 +15,7 @@ import Retail from './Components/Retail';
 import Shh from './Components/Shh';
 import SweetTrip from './Components/SweetTrip';
 import Warthog from './Components/Warthog';
-import Wu from './Components/Wu';
+import Alcest from './Components/Alcest';
 import Review from './Components/Review';
 import SignupForm from './Components/SignupForm';
 import LoginForm from './Components/LoginForm';
@@ -79,7 +79,7 @@ function App() {
         <Route path="/SHXCXCHCXSH" element={<Shh currentUser={currentUser} />} />
         <Route path="/sweet%20trip" element={<SweetTrip currentUser={currentUser}/>} />
         <Route path="/warthog" element={<Warthog currentUser={currentUser}/>} />
-        <Route path="/wu-tang%20clan" element={<Wu currentUser={currentUser}/>} />
+        <Route path="/alcest" element={<Alcest currentUser={currentUser}/>} />
         <Route path="/merch" element={<Merch />} />
         <Route path="/myaccount" element={<MyAccount setCurrentUser={setCurrentUser} />} />
         <Route path="/review" element={<Review currentUser={currentUser} />} />

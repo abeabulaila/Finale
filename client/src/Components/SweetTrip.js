@@ -7,7 +7,7 @@ function SweetTrip({currentUser}) {
     const [band, setBand] = useState({ reviews: [] })
 
     useEffect(() => {
-        fetch('/bands/43')
+        fetch('/bands/74')
             .then(r => r.json())
             .then(data => setBand(data))
     }, [])

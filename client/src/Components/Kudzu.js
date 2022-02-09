@@ -7,7 +7,7 @@ function Kudzu({currentUser}) {
     const [band, setBand] = useState({reviews: []})
 
     useEffect(() => {
-        fetch('/bands/38')
+        fetch('/bands/69')
         .then(r => r.json())
         .then(data => setBand(data))
         //.then(setReviews(band.reviews))

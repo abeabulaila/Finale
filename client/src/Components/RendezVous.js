@@ -7,7 +7,7 @@ function RendezVous({currentUser}) {
     const [band, setBand] = useState({reviews: []})
 
     useEffect(() => {
-        fetch('/bands/40')
+        fetch('/bands/71')
         .then(r => r.json())
         .then(data => setBand(data))
         //.then(setReviews(band.reviews))

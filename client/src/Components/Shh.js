@@ -7,7 +7,7 @@ function Shh({ currentUser }) {
     const [band, setBand] = useState({ reviews: [] })
 
     useEffect(() => {
-        fetch('/bands/42')
+        fetch('/bands/73')
             .then(r => r.json())
             .then(data => setBand(data))
     }, [])
