@@ -5,15 +5,10 @@ import { useState } from "react";
 
 function Gas({currentUser}) {
     const [band, setBand] = useState({reviews: []})
-    // const [reviews, setReviews] = useState({})
-  
-
-    
     useEffect(() => {
         fetch('/bands/36')
         .then(r => r.json())
         .then(data => setBand(data))
-        //.then(setReviews(band.reviews))
     }, [])
     
    
@@ -47,11 +42,15 @@ function Gas({currentUser}) {
                                 </p>
                             </div>
                         </div>
+                        <h1 id="slide-release">
+                        // Reviews
+                        </h1>
+                     <Review band={band} reviews={band.reviews} currentUser={currentUser} />
                     </Col>
                     <Col>
                         <div>
                             <div className="song-div">
-                                <h2 className="song-title"> GAS - "Pop"</h2>
+                                <h2 className="song-title"> Pop - 2000</h2>
                                 <div style={{ borderTop: "2.5px solid #FE938C ", marginRight: 100, marginBottom: "10px", marginTop: -10 }}></div>
                                 <div>
                                     <iframe style={{ border: 0, width: "550px", height: "120px", borderRadius: "15px 40px 10px 40px", marginLeft: '4px' }} src="https://bandcamp.com/EmbeddedPlayer/album=810155818/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://kompakt-gas.bandcamp.com/album/pop">Pop by GAS</a></iframe>
@@ -60,7 +59,7 @@ function Gas({currentUser}) {
                         </div>
                         <div>
                             <div className="song-div">
-                                <h2 className="song-title"> GAS - "Zauberberg"</h2>
+                                <h2 className="song-title"> Zauberberg - 1999</h2>
                                 <div style={{ borderTop: "2.5px solid #FE938C ", marginRight: 100, marginBottom: "10px", marginTop: -10 }}></div>
                                 <div>
                                     <iframe style={{ border: 0, width: "550px", height: "120px", borderRadius: "15px 40px 10px 40px", marginLeft: '4px' }} src="https://bandcamp.com/EmbeddedPlayer/album=2303878530/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://kompakt-gas.bandcamp.com/album/zauberberg">Zauberberg by GAS</a></iframe>
@@ -68,10 +67,6 @@ function Gas({currentUser}) {
                             </div>
                         </div>
                     </Col>
-                    <h1 id="slide-release">
-                        // Reviews
-                        </h1>
-                     <Review band={band} reviews={band.reviews} currentUser={currentUser} />
                         
                 </Row>
             </Container>

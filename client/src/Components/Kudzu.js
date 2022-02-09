@@ -1,11 +1,18 @@
 import React from "react";
 import { Container, Row, Col } from 'react-bootstrap'
+import { useState, useEffect } from "react";
+import Review from "./Review";
 
-function Kudzu() {
+function Kudzu({currentUser}) {
+    const [band, setBand] = useState({reviews: []})
 
-
-
-
+    useEffect(() => {
+        fetch('/bands/38')
+        .then(r => r.json())
+        .then(data => setBand(data))
+        //.then(setReviews(band.reviews))
+    }, [])
+    
     return (
         <div>
             <Container>
@@ -29,34 +36,33 @@ function Kudzu() {
                                 </div>
                             </div >
                             <div >
-                                <p className="review-text">GAS is the main musical project of German electronic musician and composer Wolfgang Voigt born 1961. The project was created as an expressive medium inspired by his experiences with taking LSD in the Königsforst, a German forest situated near his hometown of Cologne, for long periods in his youth. He has claimed that the intention of the project is to "bring the forest to the disco, or vice-versa". Gas's music is primarily regarded as ambient techno and minimal techno, combining ambient music and 4/4 techno. It is the most abstract of Voigt's many projects, with albums consisting of several long untitled tracks. All Gas material shares a characteristic sound, based on a hazy ambient wash of drones and sampled loops, "barely-audible fragments of horns, strings, record hiss and wind", usually accompanied by a four-on-the-floor kick drum.
+                                <p className="review-text">Kudzu is a synth-pop post-punk duo from Springfield, Missouri. Their catchy synth lines and memorable song writing make them an enjoyable group to listen to, and it never gets old.
                                 </p>
                             </div>
                         </div>
+                        <h1 id="slide-release">
+                        // Reviews
+                        </h1>
+                     <Review band={band} reviews={band.reviews} currentUser={currentUser} />
                     </Col>
                     <Col>
                         <div>
                             <div className="song-div">
-                                <h2 className="song-title"> GAS - Pop</h2>
+                                <h2 className="song-title"> Defeated - 2018 </h2>
                                 <div style={{ borderTop: "2.5px solid #FE938C ", marginRight: 100, marginBottom: "10px", marginTop: -10 }}></div>
                                 <div>
-                                    <iframe style={{ border: 0, width: "550px", height: "120px", borderRadius: "15px 40px 10px 40px", marginLeft: '4px' }} src="https://bandcamp.com/EmbeddedPlayer/album=810155818/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://kompakt-gas.bandcamp.com/album/pop">Pop by GAS</a></iframe>
-                                </div>
+                                <iframe style={{ border: 0, width: "550px", height: "120px", borderRadius: "15px 40px 10px 40px", marginLeft: '4px' }} src="https://bandcamp.com/EmbeddedPlayer/album=1285405765/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://kudzukudzukudzu.bandcamp.com/album/defeated">Defeated by Kudzu</a></iframe>                                </div>
                             </div>
                         </div>
                         <div>
                             <div className="song-div">
-                                <h2 className="song-title"> GAS - Zauberberg</h2>
+                                <h2 className="song-title"> Cairoglyphics - 2015</h2>
                                 <div style={{ borderTop: "2.5px solid #FE938C ", marginRight: 100, marginBottom: "10px", marginTop: -10 }}></div>
                                 <div>
-                                    <iframe style={{ border: 0, width: "550px", height: "120px", borderRadius: "15px 40px 10px 40px", marginLeft: '4px' }} src="https://bandcamp.com/EmbeddedPlayer/album=2303878530/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://kompakt-gas.bandcamp.com/album/zauberberg">Zauberberg by GAS</a></iframe>
-                                </div>
+                                <iframe style={{ border: 0, width: "550px", height: "120px", borderRadius: "15px 40px 10px 40px", marginLeft: '4px' }} src="https://bandcamp.com/EmbeddedPlayer/album=2903187256/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://kudzukudzukudzu.bandcamp.com/album/cairoglyphics">Cairoglyphics by Kudzu</a></iframe>                                </div>
                             </div>
                         </div>
                     </Col>
-                    <h1 id="slide-release">
-                        // Reviews
-                        </h1>
                 </Row>
             </Container>
         </div>

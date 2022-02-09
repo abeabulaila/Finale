@@ -1,9 +1,16 @@
 import React from "react";
 import { Container, Row, Col } from 'react-bootstrap'
+import { useState, useEffect } from "react";
+import Review from "./Review"
 
-function SweetTrip() {
+function SweetTrip({currentUser}) {
+    const [band, setBand] = useState({ reviews: [] })
 
-
+    useEffect(() => {
+        fetch('/bands/43')
+            .then(r => r.json())
+            .then(data => setBand(data))
+    }, [])
 
 
     return (
@@ -29,34 +36,36 @@ function SweetTrip() {
                                 </div>
                             </div >
                             <div >
-                                <p className="review-text">GAS is the main musical project of German electronic musician and composer Wolfgang Voigt born 1961. The project was created as an expressive medium inspired by his experiences with taking LSD in the Königsforst, a German forest situated near his hometown of Cologne, for long periods in his youth. He has claimed that the intention of the project is to "bring the forest to the disco, or vice-versa". Gas's music is primarily regarded as ambient techno and minimal techno, combining ambient music and 4/4 techno. It is the most abstract of Voigt's many projects, with albums consisting of several long untitled tracks. All Gas material shares a characteristic sound, based on a hazy ambient wash of drones and sampled loops, "barely-audible fragments of horns, strings, record hiss and wind", usually accompanied by a four-on-the-floor kick drum.
+                                <p className="review-text">Sweet Trip is an electronic/experimental rock act formed in 1993 in the Bay Area of California, United States, currently consisting of musician Roberto Burgos. They are known for their dreamy soundscapes and dense production techniques, often blending alternative rock subgenres with intelligent dance music
                                 </p>
                             </div>
                         </div>
+                        <h1 id="slide-release">
+                        // Reviews
+                        </h1>
+                     <Review band={band} reviews={band.reviews} currentUser={currentUser} />
                     </Col>
                     <Col>
                         <div>
                             <div className="song-div">
-                                <h2 className="song-title"> GAS - Pop</h2>
+                                <h2 className="song-title"> A Tiny House, In Secret Speeches, Polar Equals - 2021</h2>
                                 <div style={{ borderTop: "2.5px solid #FE938C ", marginRight: 100, marginBottom: "10px", marginTop: -10 }}></div>
                                 <div>
-                                    <iframe style={{ border: 0, width: "550px", height: "120px", borderRadius: "15px 40px 10px 40px", marginLeft: '4px' }} src="https://bandcamp.com/EmbeddedPlayer/album=810155818/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://kompakt-gas.bandcamp.com/album/pop">Pop by GAS</a></iframe>
+                                <iframe style={{ border: 0, width: "550px", height: "120px", borderRadius: "15px 40px 10px 40px", marginLeft: '4px' }} src="https://bandcamp.com/EmbeddedPlayer/album=215652981/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://sweettrip.bandcamp.com/album/a-tiny-house-in-secret-speeches-polar-equals">A Tiny House, In Secret Speeches, Polar Equals by Sweet Trip</a></iframe>
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div className="song-div">
-                                <h2 className="song-title"> GAS - Zauberberg</h2>
+                                <h2 className="song-title"> You Will Never Know Why - 2014</h2>
                                 <div style={{ borderTop: "2.5px solid #FE938C ", marginRight: 100, marginBottom: "10px", marginTop: -10 }}></div>
                                 <div>
-                                    <iframe style={{ border: 0, width: "550px", height: "120px", borderRadius: "15px 40px 10px 40px", marginLeft: '4px' }} src="https://bandcamp.com/EmbeddedPlayer/album=2303878530/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://kompakt-gas.bandcamp.com/album/zauberberg">Zauberberg by GAS</a></iframe>
+                                <iframe style={{ border: 0, width: "550px", height: "120px", borderRadius: "15px 40px 10px 40px", marginLeft: '4px' }} src="https://bandcamp.com/EmbeddedPlayer/album=432659920/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://sweettrip.bandcamp.com/album/you-will-never-know-why">You Will Never Know Why by Sweet Trip</a></iframe>
                                 </div>
                             </div>
                         </div>
                     </Col>
-                    <h1 id="slide-release">
-                        // Reviews
-                        </h1>
+        
                 </Row>
             </Container>
         </div>

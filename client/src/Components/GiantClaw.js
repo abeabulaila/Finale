@@ -48,17 +48,9 @@ function GiantClaw({currentUser}) {
                         </Row>
                     </Col>
                     <Col>
-                        <div className="song-div">
-                            <h2 className="song-title">Giant Claw - "Orange Milk" </h2>
-                            <div style={{ borderTop: "2.5px solid #FE938C ", marginRight: 100, marginBottom: "10px", marginTop: -10 }}></div>
-                            <div>
-                                <iframe style={{ border: 0, width: "550px", height: "120px", borderRadius: "15px 40px 10px 40px", marginLeft: '4px' }} src="https://bandcamp.com/EmbeddedPlayer/album=2082484105/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://staticshockrecords.bandcamp.com/album/warthog">Orange Milk by Giant Claw</a></iframe>
-
-                            </div>
-                        </div>
                         <div>
                             <div className="song-div">
-                                <h2 className="song-title">Giant Claw - "Mirror Guide"</h2>
+                                <h2 className="song-title">Mirror Guide - 2021</h2>
                                 <div style={{ borderTop: "2.5px solid #FE938C ", marginRight: 100, marginBottom: "10px", marginTop: -10 }}></div>
                                 <div>
                                     <iframe style={{ border: 0, width: "550px", height: "120px", borderRadius: "15px 40px 10px 40px", marginLeft: '4px' }} src="https://bandcamp.com/EmbeddedPlayer/album=1087983159/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://giantclaw.bandcamp.com/album/mirror-guide">Mirror Guide by Giant Claw</a></iframe>
@@ -67,10 +59,18 @@ function GiantClaw({currentUser}) {
                         </div>
 
                         <div className="song-div">
-                            <h2 className="song-title">Giant Claw - "Orange Milk" </h2>
+                            <h2 className="song-title">DARK WEB - 2014</h2>
                             <div style={{ borderTop: "2.5px solid #FE938C ", marginRight: 100, marginBottom: "10px", marginTop: -10 }}></div>
                             <div>
                                 <iframe style={{ border: 0, width: "550px", height: "120px", borderRadius: "15px 40px 10px 40px", marginLeft: '4px' }} src="https://bandcamp.com/EmbeddedPlayer/album=2036094323/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://giantclaw.bandcamp.com/album/dark-web">DARK WEB by Giant Claw</a></iframe>
+
+                            </div>
+                        </div>
+                        <div className="song-div">
+                            <h2 className="song-title">Orange Milk - 2010 </h2>
+                            <div style={{ borderTop: "2.5px solid #FE938C ", marginRight: 100, marginBottom: "10px", marginTop: -10 }}></div>
+                            <div>
+                                <iframe style={{ border: 0, width: "550px", height: "120px", borderRadius: "15px 40px 10px 40px", marginLeft: '4px' }} src="https://bandcamp.com/EmbeddedPlayer/album=2082484105/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://staticshockrecords.bandcamp.com/album/warthog">Orange Milk by Giant Claw</a></iframe>
 
                             </div>
                         </div>
