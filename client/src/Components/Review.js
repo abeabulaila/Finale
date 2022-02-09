@@ -5,10 +5,9 @@ import ReviewCard from "./ReviewCard";
 
 function Review({ currentUser, band, reviews }) {
     // let navigate = useNavigate();
-    // const [isLoading, setIsLoading] = useState(false);
 
     const [errors, setErrors] = useState([]);
-    const [newReview, setNewReview] = useState({})
+    const [newReview, setNewReview] = useState({reviews: []})
     const [formData, setFormData] = useState({
         title: "",
         description: ""
@@ -18,37 +17,11 @@ function Review({ currentUser, band, reviews }) {
     const thisBand=band.id
 
     useEffect(() => {
-        fetch(`/api/bands/${band.id}`)
-        // setIsLoading(true)
+        fetch(`/bands/${thisBand}`)
             .then(r => r.json())
             .then(data => setAllReviews(data.reviews))
-            // .then(renderBand)
-            // setIsLoading(false)
         }, [])
 
-
-
-        
-            {reviews.map(rev => {
-                return (
-                    <ReviewCard
-                        key={rev.id}
-                        title={rev.title}
-                        description={rev.description}
-                    />
-                )
-            })
-            } 
-    
-    
-        
-        // setAllReviews(band.reviews)
-    
-    // console.log(allReviews)
-
-    // setAllReviews(band.reviews)
-
-    console.log(allReviews)
 
 
     function manageFormData(event) {
@@ -60,34 +33,31 @@ function Review({ currentUser, band, reviews }) {
     }
 
 
-    function handleSubmit(e) {
-        e.preventDefault();
+    function handleSubmit() {
 
         const user_id = currentUser.id
-        const band_id = band
+        const band_id = band.id
         const title = formData.title
         const description = formData.description
-        fetch("/api/reviews", {
+        fetch("/reviews", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({ title, description, user_id, band_id }),
-
+            
         }).then((r) => {
-            if (r.ok) {
-                r.json().then((rev) => setNewReview(rev));
-            } else {
-                r.json().then((err) => setErrors(err.errors));
-                alert("Must be logged in for this feature")
-            }
-        });
+            r.json().then((rev) => setNewReview(rev));
+
+        })
     }
-
-
-
-    //render review card for each review so that it populates accordingly
-
+    //         if (r.ok) {
+    //         } else {
+    //             r.json().then((err) => setErrors(err.errors));
+    //             alert("Must be logged in for this feature")
+    //         }
+    //     });
+    // }
 
     return (
         <div>

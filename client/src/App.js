@@ -39,7 +39,7 @@ function App() {
   
   
   useEffect(() => {
-    fetch('/api/bands')
+    fetch('/bands')
     .then(r => r.json())
     .then(data => setBandList(data))
     

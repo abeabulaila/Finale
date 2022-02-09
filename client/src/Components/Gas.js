@@ -10,7 +10,7 @@ function Gas({currentUser}) {
 
     
     useEffect(() => {
-        fetch('/api/bands/36')
+        fetch('/bands/36')
         .then(r => r.json())
         .then(data => setBand(data))
         //.then(setReviews(band.reviews))

@@ -24,7 +24,6 @@ h1{
   margin-top: 20px;
   margin-bottom: 60px;
   padding: 3%;
-
 }
 
 
@@ -39,9 +38,8 @@ h1{
   box-shadow: -3px 3px rgb(119, 72, 72), 0.5em 0 .4em rgb(71, 44, 13, 0.7);
 
   margin-top: 20px;
-padding: 3%;
+  padding: 3%;
 }
-
 
 .intro {
 margin-top: 30px;
@@ -90,7 +88,6 @@ margin-left: 10px;
   margin-bottom: 100px;
   margin-left: 150px;
   width: 350px
-
 }
 
 .capture{
@@ -100,7 +97,6 @@ margin-left: 10px;
   border-radius: 0px 100px 100px 0px;
   border-style: double;
   width: 800px;
-
 }
 
 .capture-title{
@@ -108,7 +104,6 @@ margin-left: 10px;
   margin-left: 500px;
   font-size: 3.5em;
 }
-
 
 .capture-bottom{
   margin-top: 30px;
@@ -125,13 +120,11 @@ right: 0px
   margin-top: 10px;
 margin-left: 50px;
 font-size: 3.5em;
-
 }
 
  .navbar {
   min-height: 80px;
-  font-size: 1.5em;
-  
+  font-size: 1.5em;  
 }
 
 .navbar-brand {
@@ -142,7 +135,6 @@ font-size: 3.5em;
   display: inline;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .nav-div{
@@ -227,7 +219,6 @@ width: 125px;
     color: rgb(22, 22, 22);
   }}
 
-
   #slide-artist {
     position:relative;
     left: -1000px;
@@ -242,8 +233,7 @@ width: 125px;
   }
   
   @keyframes slide {
-    100% { left: 0;}
-      
+    100% { left: 0;}  
   }
   
   .artist-title{
@@ -266,11 +256,12 @@ width: 125px;
     margin-right: auto;
     text-align: center;
   }
-
+  
   .acc-button{
  display: block;
  margin-left: auto;
  margin-right: auto;
  width:150px
+}
 
-  }
+

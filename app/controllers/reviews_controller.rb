@@ -1,4 +1,4 @@
-class Api::ReviewsController < ApplicationController
+class ReviewsController < ApplicationController
   skip_before_action :authenticate_user, only: [:index, :show]
 
   def index

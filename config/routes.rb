@@ -1,9 +1,8 @@
 Rails.application.routes.draw do 
-  namespace :api do
-    resources :reviews
-    resources :bands, only: [:index, :update, :show]
-  end
 
+ 
+  resources :bands, only: [:index, :update, :show]
+  resources :reviews
   resources :users
 
   get '/me', to: "users#show"
