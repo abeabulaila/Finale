@@ -7,7 +7,7 @@ class BandsController < ApplicationController
     end
 
     def show
-        band = Band.find_by(params[:id])
+        band = Band.find(params[:id])
         render json: band, include: :reviews, status: :ok
     end
 

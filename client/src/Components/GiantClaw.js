@@ -1,8 +1,15 @@
 import React from "react";
 import { Container, Row, Col } from 'react-bootstrap'
-
-function GiantClaw() {
-
+import { useState, useEffect } from "react";
+import Review from "./Review";
+function GiantClaw({currentUser}) {
+  const [band, setBand] = useState({reviews: []})
+    
+    useEffect(() => {
+        fetch('/bands/37')
+        .then(r => r.json())
+        .then(data => setBand(data))
+    }, [])
 
 
 
@@ -37,6 +44,7 @@ function GiantClaw() {
                             <h1 id="slide-release">
                         // Reviews
                             </h1>
+                            <Review band={band} reviews={band.reviews} currentUser={currentUser} />
                         </Row>
                     </Col>
                     <Col>

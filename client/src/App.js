@@ -63,7 +63,6 @@ function App() {
 
 
 
-
   return (
     <Router>
       <NavBar currentUser={currentUser} />
@@ -72,15 +71,15 @@ function App() {
         <Route path="/artists" element={<Artists bandList={bandList} />} />
         <Route path="/merch" element={<Merch />} />
         <Route path="/gas" element={<Gas currentUser={currentUser} />} />
-        <Route path="/giant%20claw" element={<GiantClaw />} />
-        <Route path="/kudzu" element={<Kudzu />} />
-        <Route path="/mastodon" element={<Mastodon />} />
-        <Route path="/rendez%20vous" element={<RendezVous />} />
-        <Route path="/retail" element={<Retail />} />
-        <Route path="/SHXCXCHCXSH" element={<Shh />} />
-        <Route path="/sweet%20trip" element={<SweetTrip />} />
-        <Route path="/warthog" element={<Warthog />} />
-        <Route path="/wu-tang%20clan" element={<Wu />} />
+        <Route path="/giant%20claw" element={<GiantClaw currentUser={currentUser} />} />
+        <Route path="/kudzu" element={<Kudzu currentUser={currentUser} />} />
+        <Route path="/mastodon" element={<Mastodon currentUser={currentUser} />} />
+        <Route path="/rendez%20vous" element={<RendezVous currentUser={currentUser} />} />
+        <Route path="/retail" element={<Retail currentUser={currentUser} />} />
+        <Route path="/SHXCXCHCXSH" element={<Shh currentUser={currentUser} />} />
+        <Route path="/sweet%20trip" element={<SweetTrip currentUser={currentUser}/>} />
+        <Route path="/warthog" element={<Warthog currentUser={currentUser}/>} />
+        <Route path="/wu-tang%20clan" element={<Wu currentUser={currentUser}/>} />
         <Route path="/merch" element={<Merch />} />
         <Route path="/myaccount" element={<MyAccount setCurrentUser={setCurrentUser} />} />
         <Route path="/review" element={<Review currentUser={currentUser} />} />

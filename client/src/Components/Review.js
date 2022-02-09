@@ -12,15 +12,15 @@ function Review({ currentUser, band, reviews }) {
         title: "",
         description: ""
     })
-    const [allReviews, setAllReviews] = useState([])
+    // const [allReviews, setAllReviews] = useState({reviews: []})
 
-    const thisBand=band.id
+    // const thisBand=band.id
 
-    useEffect(() => {
-        fetch(`/bands/${thisBand}`)
-            .then(r => r.json())
-            .then(data => setAllReviews(data.reviews))
-        }, [])
+    // useEffect(() => {
+    //     fetch(`/bands/${thisBand}`)
+    //         .then(r => r.json())
+    //         .then(data => setAllReviews(data.reviews))
+    //     }, [])
 
 
 
