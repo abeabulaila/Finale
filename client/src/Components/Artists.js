@@ -2,8 +2,6 @@ import React from "react";
 import BandCard from "./BandCard";
 
 function Artists({bandList}) {
-
-
     return (
         <div>
             <div id="slide-artist" className="capture">
@@ -18,8 +16,9 @@ function Artists({bandList}) {
                             img={band.img}
                             album={band.album}
                             genre={band.genre}
+                            id={band.id}
+                            band={band}
                         />
-
                     )
                 })}
             </div>

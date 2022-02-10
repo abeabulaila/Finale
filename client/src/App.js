@@ -19,8 +19,13 @@ import Alcest from './Components/Alcest';
 import Review from './Components/Review';
 import SignupForm from './Components/SignupForm';
 import LoginForm from './Components/LoginForm';
+import BioPage from './Components/BioPage';
+import BandCard from "./Components/BandCard";
+
 function App() {
   const [bandList, setBandList] = useState([{}])
+  // const [band, setBand] = useState({reviews: []})
+
 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
@@ -44,6 +49,24 @@ function App() {
     .then(data => setBandList(data))
     
   }, [])
+
+  // function allBands(){
+  // bandList.map(band => {
+  //     return (
+  //       <BandCard
+  //       key={band.id}
+  //       bandName={band.band_name}
+  //       img={band.img}
+  //       album={band.album}
+  //       genre={band.genre}
+  //       id={band.id}
+  //       band={band}
+  //       />
+        
+  //       )
+  //     })
+  //   }
+  // console.log(bandList)
  
 
   // if(currentUser) {
@@ -62,13 +85,12 @@ function App() {
 
 
 
-
   return (
     <Router>
       <NavBar currentUser={currentUser} />
       <Routes>
         <Route path="/" element={<Welcome />} />
-        <Route path="/artists" element={<Artists bandList={bandList} />} />
+        <Route path="/artists" element={<Artists bandList={bandList} currentUser={currentUser} />} />
         <Route path="/merch" element={<Merch />} />
         <Route path="/gas" element={<Gas currentUser={currentUser} />} />
         <Route path="/giant%20claw" element={<GiantClaw currentUser={currentUser} />} />
@@ -85,6 +107,8 @@ function App() {
         <Route path="/review" element={<Review currentUser={currentUser} setCurrentUser={setCurrentUser} />} />
         <Route path="/signup" element={<SignupForm onLogin={setCurrentUser} />} />
         <Route path="/login" element={<LoginForm currentUser={currentUser} onLogin={setCurrentUser}  />} />
+        <Route path="/bands/:id" element={<BioPage bandList={bandList} />} />
+
       </Routes>
     </Router>
   );
