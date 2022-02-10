@@ -82,7 +82,7 @@ function App() {
         <Route path="/alcest" element={<Alcest currentUser={currentUser}/>} />
         <Route path="/merch" element={<Merch />} />
         <Route path="/myaccount" element={<MyAccount setCurrentUser={setCurrentUser} />} />
-        <Route path="/review" element={<Review currentUser={currentUser} />} />
+        <Route path="/review" element={<Review currentUser={currentUser} setCurrentUser={setCurrentUser} />} />
         <Route path="/signup" element={<SignupForm onLogin={setCurrentUser} />} />
         <Route path="/login" element={<LoginForm currentUser={currentUser} onLogin={setCurrentUser}  />} />
       </Routes>

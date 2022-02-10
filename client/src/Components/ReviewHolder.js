@@ -58,13 +58,12 @@ function ReviewHolder() {
 
             <div className="review-div">
                 <div >
-                    <h2 className="review-title"> Welcome the Wu </h2>
+                    <h2 className="review-title"> Welcoming Alcest </h2>
                     <div style={{ borderTop: "2.5px solid #FE938C ", marginRight: 50, marginLeft: 30, marginBottom: "10px", marginTop: -10 }}>
                     </div>
                 </div >
                 <div >
-                    <p className="review-text"> It is with great enthusiasm that we share our latest news: we have partnered with Wu-Tang Clan to distribute their upcoming album. Infinite Spirit welcomes the Wu with open arms. 	
-&#128588;
+                    <p className="review-text"> It is with great enthusiasm that we share our latest news: we have partnered with Alcest to distribute their upcoming album. Infinite Spirit welcomes the French artists with open arms.
                     </p>
                 </div>
             </div>

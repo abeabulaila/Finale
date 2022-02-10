@@ -3,22 +3,9 @@ import BandCard from "./BandCard";
 
 function BandPage({ bandList }) {
 
-
-    // function getBand() {
-
-    //     bandList.filter((band) => band === bandList.band_name); {
-    //         return (
-    //             <BandCard
-    //                 key={bandList.id}
-    //                 bandName={bandList.band_name}
-    //                 img={bandList.img}
-    //                 album={bandList.album}
-    //                 genre={bandList.genre}
-    //             />
-
-    //         )
-    //     }
-    // }
+    //fetch request to dynamic endpoint picking id of the band that was clicked on
+    //adding biography/bandcamp links onto back end "bands" table
+    //adding review component for each one. same layout --> dynamic rendering
 
 
     function getBand() {

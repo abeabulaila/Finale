@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ReviewCard from "./ReviewCard";
 
-function Review({ currentUser, band, reviews }) {
+function Review({ currentUser, band, reviews, setCurrentUser}) {
     // let navigate = useNavigate();
 
     const [errors, setErrors] = useState([]);
@@ -69,6 +69,8 @@ function Review({ currentUser, band, reviews }) {
                         key={rev.id}
                         title={rev.title}
                         description={rev.description}
+                        currentUser={currentUser}
+                        setCurrentUser={setCurrentUser}
                     />
                 )
             })

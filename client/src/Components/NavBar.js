@@ -38,7 +38,7 @@ function NavBar( {currentUser} ) {
           <Nav className="me-auto">
             <Nav.Link className= "nav-but" href="/">Home</Nav.Link>
             <Nav.Link className= "nav-but" href="/artists">Artists</Nav.Link>
-            <Nav.Link className= "nav-but" href="/merch">Merch</Nav.Link>
+            {/* <Nav.Link className= "nav-but" href="/merch">Merch</Nav.Link> */}
             <Nav.Link className= "nav-but" href="/myaccount">My Account</Nav.Link>
             {currentUser ? <Nav.Link className= "nav-but" href="/" onClick={handleLogout} >Log Out</Nav.Link> : <Nav.Link className= "nav-but" href="/login">Log In</Nav.Link>  }
           </Nav>
