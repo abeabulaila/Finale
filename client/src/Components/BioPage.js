@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import Review from "./Review";
 
 function BioPage({currentUser}) {
-    const [band, setBand] = useState({})
+    const [band, setBand] = useState({reviews: []})
 
     let { id } = useParams();
 
@@ -45,7 +45,7 @@ function BioPage({currentUser}) {
                     <h1 id="slide-release">
                         // Reviews
                     </h1>
-                    {/* <Review band={band} reviews={band.reviews} currentUser={currentUser} /> */}
+                    <Review band={band} reviews={band.reviews} currentUser={currentUser} />
                 </Col>
                 <Col>
                     <div>
