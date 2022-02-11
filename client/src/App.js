@@ -6,16 +6,6 @@ import MyAccount from './Components/MyAccount';
 import NavBar from './Components/NavBar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from "react";
-import Gas from './Components/Gas';
-import GiantClaw from './Components/GiantClaw';
-import Kudzu from './Components/Kudzu';
-import Mastodon from './Components/Mastodon';
-import RendezVous from './Components/RendezVous';
-import Retail from './Components/Retail';
-import Shh from './Components/Shh';
-import SweetTrip from './Components/SweetTrip';
-import Warthog from './Components/Warthog';
-import Alcest from './Components/Alcest';
 import Review from './Components/Review';
 import SignupForm from './Components/SignupForm';
 import LoginForm from './Components/LoginForm';
@@ -92,16 +82,6 @@ function App() {
         <Route path="/" element={<Welcome />} />
         <Route path="/artists" element={<Artists bandList={bandList} currentUser={currentUser} />} />
         <Route path="/merch" element={<Merch />} />
-        <Route path="/gas" element={<Gas currentUser={currentUser} />} />
-        <Route path="/giant%20claw" element={<GiantClaw currentUser={currentUser} />} />
-        <Route path="/kudzu" element={<Kudzu currentUser={currentUser} />} />
-        <Route path="/mastodon" element={<Mastodon currentUser={currentUser} />} />
-        <Route path="/rendez%20vous" element={<RendezVous currentUser={currentUser} />} />
-        <Route path="/retail" element={<Retail currentUser={currentUser} />} />
-        <Route path="/SHXCXCHCXSH" element={<Shh currentUser={currentUser} />} />
-        <Route path="/sweet%20trip" element={<SweetTrip currentUser={currentUser}/>} />
-        <Route path="/warthog" element={<Warthog currentUser={currentUser}/>} />
-        <Route path="/alcest" element={<Alcest currentUser={currentUser}/>} />
         <Route path="/merch" element={<Merch />} />
         <Route path="/myaccount" element={<MyAccount setCurrentUser={setCurrentUser} />} />
         <Route path="/review" element={<Review currentUser={currentUser} setCurrentUser={setCurrentUser} />} />

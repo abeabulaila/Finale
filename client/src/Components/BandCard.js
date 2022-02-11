@@ -1,23 +1,13 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom'
-import { useState } from "react";
-import { Container, Row, Col } from 'react-bootstrap'
-import Review from "./Review";
-import Warthog from "./Warthog";
 import BioPage from "./BioPage";
 
 function BandCard({ bandName, album, genre, img, id, currentUser, band }) {
     let navigate = useNavigate();
-    // const [band, setBand] = useState({reviews: []})
 
 
     function onClick(){
-        //dynamically render routes to bands pages by setting this function on the img
-        //useNavigate and interpolate the route by using the bandName: navigate(/${bandName})
-        //this way whenever the img is clicked it will head to a route stated in app.js to a component of the band with the same name./../
-        // fetch(`/bands/${id}`)
-        // .then(r => r.json())
-        // .then(data => setBand(data))
+    
         
         console.log(bandName)
         navigate(`/bands/${id}`)
