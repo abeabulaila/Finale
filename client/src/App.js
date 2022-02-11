@@ -107,7 +107,7 @@ function App() {
         <Route path="/review" element={<Review currentUser={currentUser} setCurrentUser={setCurrentUser} />} />
         <Route path="/signup" element={<SignupForm onLogin={setCurrentUser} />} />
         <Route path="/login" element={<LoginForm currentUser={currentUser} onLogin={setCurrentUser}  />} />
-        <Route path="/bands/:id" element={<BioPage bandList={bandList} />} />
+        <Route path="/bands/:id" element={<BioPage bandList={bandList} currentUser={currentUser} />} />
 
       </Routes>
     </Router>

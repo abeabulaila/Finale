@@ -25,7 +25,6 @@ function BandCard({ bandName, album, genre, img, id, currentUser, band }) {
             <BioPage
             key={id}
             bandName={bandName}
-            currentUser={currentUser}
             band={band}
             />
             )
