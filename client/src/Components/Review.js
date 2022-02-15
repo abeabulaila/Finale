@@ -2,26 +2,16 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ReviewCard from "./ReviewCard";
-
-function Review({ currentUser, band, reviews, setCurrentUser}) {
+import { Button } from "react-bootstrap";
+function Review({ currentUser, band, reviews, setCurrentUser }) {
     // let navigate = useNavigate();
 
     const [errors, setErrors] = useState([]);
-    const [newReview, setNewReview] = useState({reviews: []})
+    const [newReview, setNewReview] = useState({ reviews: [] })
     const [formData, setFormData] = useState({
         title: "",
         description: ""
     })
-    // const [allReviews, setAllReviews] = useState({reviews: []})
-
-    // const thisBand=band.id
-
-    // useEffect(() => {
-    //     fetch(`/bands/${thisBand}`)
-    //         .then(r => r.json())
-    //         .then(data => setAllReviews(data.reviews))
-    //     }, [])
-
 
 
     function manageFormData(event) {
@@ -45,9 +35,9 @@ function Review({ currentUser, band, reviews, setCurrentUser}) {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({ title, description, user_id, band_id }),
-            
+
         }).then((r) => {
-            r.json().then((rev) => setNewReview(rev));
+                r.json().then((rev) => setNewReview(rev));     
 
         })
     }
@@ -63,24 +53,24 @@ function Review({ currentUser, band, reviews, setCurrentUser}) {
         <div>
             <div>
 
-            {reviews.map(rev => {
-                return (
-                    <ReviewCard
-                        key={rev.id}
-                        title={rev.title}
-                        description={rev.description}
-                        currentUser={currentUser}
-                        setCurrentUser={setCurrentUser}
-                    />
-                )
-            })
-            } 
-    
-            </div>
-            <form onSubmit={handleSubmit}>
+                {reviews.map(rev => {
+                    return (
+                        <ReviewCard
+                            key={rev.id}
+                            title={rev.title}
+                            description={rev.description}
+                            currentUser={currentUser}
+                            setCurrentUser={setCurrentUser}
+                        />
+                    )
+                })
+                }
+
+            </div> {currentUser ? <form className="show-review" onSubmit={handleSubmit}>
+                
                 <h1>Leave a Review!</h1>
 
-                <label>
+                <label className="rev">
                     Title:
                     <input
                         name="title"
@@ -90,8 +80,8 @@ function Review({ currentUser, band, reviews, setCurrentUser}) {
                         required />
                 </label>
                 <br></br>
-                <label>
-                    Description:
+                <label className="rev">
+                    Body:
                     <input
                         name="description"
                         type="description"
@@ -99,9 +89,8 @@ function Review({ currentUser, band, reviews, setCurrentUser}) {
                         onChange={manageFormData}
                         required />
                 </label>
-                <button>Submit</button>
-            </form>
-
+                <button className="sub">Submit</button>
+            </form> : <div> </div>}
         </div>
     );
 }

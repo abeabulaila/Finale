@@ -265,3 +265,18 @@ width: 125px;
 }
 
 
+
+.rev {
+  display: block;
+}
+.sub {
+  margin-top: 10px;
+  display: block;
+  margin-left: 80px;
+  border-radius: 15%;
+  background-color: #ffffff;
+}
+
+.sub:hover {
+  transform: scale(1.05);
+}

@@ -17,6 +17,8 @@ function BioPage({currentUser}) {
     }, [])
     console.log(band.band_name)
 
+
+
     return (
         <div>
             <Container>
