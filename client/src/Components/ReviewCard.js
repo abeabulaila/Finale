@@ -10,7 +10,7 @@ function ReviewCard({ title, description }) {
                     </div>
                 </div>
                 <div>
-                    <p className="review-text"> {description}</p>
+                    <p className="review-text"> "{description}"</p>
                 </div>
             </div>
         </div>
