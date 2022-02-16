@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
@@ -10,8 +10,6 @@ const LoginForm = ({ onLogin }) => {
         username: "",
         password: "",
     });
-    const [errors, setErrors] = useState([]);
-
 
     const handleChange = (e) => {
         setFormData({
@@ -34,13 +32,10 @@ const LoginForm = ({ onLogin }) => {
                 r.json().then((user) => onLogin(user));
                 navigate("/")
             } else {
-                r.json().then((err) => setErrors(err.errors));
                 alert("Invalid Username or Password")
             }
         });
     }
-
-
 
     return (
         <div className="logform">
@@ -66,11 +61,9 @@ const LoginForm = ({ onLogin }) => {
                 />
                 <br />
                 <br />
-                <button type="submit">Submit</button>
+                <button type="submit" className="sign-in">Submit</button>
             </form>
             <br />
-            <br />
-
             <Link to="/signup" replace>
                 Don't have an account? Sign Up!
             </Link>

@@ -32,11 +32,15 @@ class UsersController < ApplicationController
   end
   
     def destroy
-      user = User.find(params[:id])
-      user.destroy
+      # user = User.find(params[:id])
+      if current_user
+      current_user.destroy
       head :no_content
-    rescue ActiveRecord::RecordNotFound => error
-      render json: { error: error.message }, status: :not_found
+      else 
+        render json: "User does not exist", status: :not_found
+    # rescue ActiveRecord::RecordNotFound => error
+    #   render json: { error: error.message }, status: :not_found
+      end
     end
   
     private

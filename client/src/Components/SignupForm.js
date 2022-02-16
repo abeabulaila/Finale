@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {Link} from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
 
 const SignupForm = ({onLogin}) => {
   let navigate = useNavigate();
   const [errors, setErrors] = useState([]);
-
 
   const [formData, setFormData] = useState({
     username: "",
@@ -67,8 +66,9 @@ const SignupForm = ({onLogin}) => {
         />
         <br />
         <br />
-        <button type="submit">Submit</button>
+        <button type="submit" className="sign-in">Submit</button>
       </form>
+      <br />
       <Link to="/login" replace>
         Have an account already? Log in!
       </Link>

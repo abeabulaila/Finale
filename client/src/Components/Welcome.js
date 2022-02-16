@@ -1,11 +1,9 @@
 import React from "react";
-import ReviewHolder from "./ReviewHolder";
+import Blog from "./Blog";
 import SongHolder from "./SongHolder";
 import { Container, Row, Col } from 'react-bootstrap'
 import logo from "./Images/recordlogo.png"
-import LoginForm from "./LoginForm";
 function Welcome() {
-
     return (
         <div>
             <div className="intro">
@@ -26,7 +24,7 @@ function Welcome() {
                 <Row>
                     <Col>
                         <div>
-                            <ReviewHolder />
+                            <Blog />
                         </div>
                     </Col>
                     <Col>

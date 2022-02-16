@@ -1,10 +1,6 @@
-import React from "react";
-
-function ReviewHolder() {
-
+function Blog() {
     return (
         <div>
-
             <div className="review-div">
                 <div >
                     <h2 className="review-title"> Latest Retail Album </h2>
@@ -18,7 +14,6 @@ function ReviewHolder() {
                     </p>
                 </div>
             </div>
-
 
             <div className="review-div">
                 <div >
@@ -72,4 +67,4 @@ function ReviewHolder() {
         </div>
     )
 }
-export default ReviewHolder
+export default Blog

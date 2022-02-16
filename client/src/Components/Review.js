@@ -1,18 +1,11 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import ReviewCard from "./ReviewCard";
-import { Button } from "react-bootstrap";
 function Review({ currentUser, band, reviews, setCurrentUser }) {
-    // let navigate = useNavigate();
-
-    const [errors, setErrors] = useState([]);
     const [newReview, setNewReview] = useState({ reviews: [] })
     const [formData, setFormData] = useState({
         title: "",
         description: ""
     })
-
 
     function manageFormData(event) {
         const key = event.target.name;
@@ -21,7 +14,6 @@ function Review({ currentUser, band, reviews, setCurrentUser }) {
             [key]: event.target.value
         })
     }
-
 
     function handleSubmit() {
 
@@ -37,17 +29,10 @@ function Review({ currentUser, band, reviews, setCurrentUser }) {
             body: JSON.stringify({ title, description, user_id, band_id }),
 
         }).then((r) => {
-                r.json().then((rev) => setNewReview(rev));     
+            r.json().then((rev) => setNewReview(rev));
 
         })
     }
-    //         if (r.ok) {
-    //         } else {
-    //             r.json().then((err) => setErrors(err.errors));
-    //             alert("Must be logged in for this feature")
-    //         }
-    //     });
-    // }
 
     return (
         <div>
@@ -67,7 +52,7 @@ function Review({ currentUser, band, reviews, setCurrentUser }) {
                 }
 
             </div> {currentUser ? <form className="show-review" onSubmit={handleSubmit}>
-                
+
                 <h1>Leave a Review!</h1>
 
                 <label className="rev">
