@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ReviewCard from "./ReviewCard";
 function Review({ currentUser, band, reviews, setCurrentUser }) {
     const [newReview, setNewReview] = useState({ reviews: [] })
@@ -16,7 +16,6 @@ function Review({ currentUser, band, reviews, setCurrentUser }) {
     }
 
     function handleSubmit() {
-
         const user_id = currentUser.id
         const band_id = band.id
         const title = formData.title
@@ -46,6 +45,7 @@ function Review({ currentUser, band, reviews, setCurrentUser }) {
                             description={rev.description}
                             currentUser={currentUser}
                             setCurrentUser={setCurrentUser}
+                            band={band}
                         />
                     )
                 })

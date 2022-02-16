@@ -3,7 +3,7 @@ Rails.application.routes.draw do
  
   resources :bands, only: [:index, :update, :show]
   resources :reviews, only: [:index, :create]
-  resources :users, only: [:create, :update, :destroy]
+  resources :users, only: [:index, :create, :update, :destroy]
 
   get '/me', to: "users#show"
   post '/login', to: "sessions#create"

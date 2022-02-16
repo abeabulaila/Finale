@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import Review from "./Review";
 
 function BioPage({ currentUser }) {
-    
+
     const [band, setBand] = useState({ reviews: [] })
     let { id } = useParams();
     useEffect(() => {
@@ -12,8 +12,6 @@ function BioPage({ currentUser }) {
             .then(r => r.json())
             .then(data => setBand(data))
     }, [])
-    console.log(band.band_name)
-
 
     return (
         <div>

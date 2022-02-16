@@ -204,7 +204,7 @@ width: 125px;
   -webkit-animation-delay: 1s;
   animation: slide-release 2s forwards;
   animation-delay: 0.1s;
-  color: #FE938C;
+  color: #464646;
 }
 
 @-webkit-keyframes slide-release {
